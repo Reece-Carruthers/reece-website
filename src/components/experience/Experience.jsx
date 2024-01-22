@@ -3,7 +3,7 @@ import UniversityExperience from "./experienceType/UniversityExperience.jsx";
 
 export default function Experience() {
     return (
-        <div className="flex flex-col rounded-xl border p-2 lg:p-5">
+        <div className="flex flex-col rounded-xl border p-2 lg:p-5 lg:w-2/3 mx-auto justify-center items-center">
             <h2 className="text-xl lg:text-2xl 2xl:text-4xl m-2">Experience</h2>
             <HMRCExperience />
             <UniversityExperience />
