@@ -18,6 +18,8 @@ export default function HMRCExperience() {
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>Accessibility WCAG</li>
+                    <li>Scrum</li>
+                    <li>MongoDB</li>
                     <li>Requirements Analysis</li>
                 </ul>
             </div>
