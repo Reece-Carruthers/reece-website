@@ -4,6 +4,9 @@ import linkedin from "../assets/LinkedinLogo.png";
 import github from "../assets/GithubLogo.png";
 import cv from "../assets/cv-icon.png";
 import cvPDF from "../assets/Reece-Carruthers-CV.pdf";
+import {useState} from "react";
+import ContactMe from "./contact/ContactMe.jsx";
+
 
 const profile = {
     name: 'Reece Carruthers',
@@ -14,8 +17,12 @@ const profile = {
     location: 'Newcastle upon Tyne',
 }
 export default function Banner() {
+
+    const [openContactMe, setOpenContactMe] = useState(false);
+
     return (
         <div className="mb-10">
+            <ContactMe open={openContactMe} setOpen={setOpenContactMe} />
             <div>
                 <img className="h-32 w-full object-cover lg:h-48" src={profile.backgroundImage} alt=""/>
             </div>
@@ -35,8 +42,9 @@ export default function Banner() {
                             <button
                                 type="button"
                                 className="inline-flex justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                                onClick={() => setOpenContactMe(!openContactMe)}
                             >
-                                <EnvelopeIcon className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400" aria-hidden="true"/>
+                                <EnvelopeIcon className="-ml-0.5 mr-1.5 h-5 w-5 text-black" aria-hidden="true"/>
                                 <span>Contact Me</span>
                             </button>
                             <a
