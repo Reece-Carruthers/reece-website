@@ -1,6 +1,7 @@
 import AboutMe from "./components/AboutMe.jsx";
 import Experience from "./components/experience/Experience.jsx";
 import Banner from "./components/Banner.jsx";
+import TechStack from "./components/TechStack.jsx";
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
                     ))}
                 </ul>
             </div>
+            <TechStack />
         </>
     )
 }
