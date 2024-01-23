@@ -1,23 +1,26 @@
 import AboutMe from "./components/AboutMe.jsx";
-import SocialLinks from "./components/SocialLinks.jsx";
 import Experience from "./components/experience/Experience.jsx";
+import Banner from "./components/Banner.jsx";
 
 export default function App() {
 
-  return (
-    <>
-        <div className="grid grid-col p-10 lg:p-0 lg:m-0 gap-10 justify-center items-center">
-            <h1 className="text-4xl sm:text-6xl 2xl:text-8xl text-center p-5">Reece Carruthers</h1>
-            <div className="drop-shadow-2xl shadow-white">
-                <AboutMe />
+    const sections = [
+        {id: 1, componentToDisplay: <AboutMe/>},
+        {id: 2, componentToDisplay: <Experience/>},
+    ]
+
+    return (
+        <>
+            <Banner/>
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <ul role="list" className="divide-y divide-gray-200">
+                    {sections.map((section) => (
+                        <li key={section.id} className="py-4">
+                            {section.componentToDisplay}
+                        </li>
+                    ))}
+                </ul>
             </div>
-            <div className="drop-shadow-2xl shadow-white">
-                <Experience />
-            </div>
-            <div className="m-10 text-center grid grid-cols-2 gap-10">
-                <SocialLinks />
-            </div>
-        </div>
-    </>
-  )
+        </>
+    )
 }

@@ -1,12 +1,61 @@
-import HMRCExperience from "./experienceType/HMRCExperience.jsx";
-import UniversityExperience from "./experienceType/UniversityExperience.jsx";
+import ExperienceType from "./ExperienceType.jsx";
 
 export default function Experience() {
+
+    const hmrcExperience = {
+        description: "I have worked at HM Revenue & Customs since the 5th of September 2022 until present",
+        skills: [
+            "Time Management",
+            "Working under pressure",
+            "Communication",
+            "Collaboration",
+            "Problem Solving",
+            "Critical Thinking",
+            "Scala",
+            "Test Driven Development",
+            "Restful APIs",
+            "Unit Testing",
+            "HTML",
+            "CSS",
+            "Accessibility WCAG",
+            "Scrum",
+            "MongoDB",
+            "Requirements Analysis"
+        ]
+    }
+
+    const universityExperience = {
+        description: "During my degree at Northumbria University, I have had the opportunity to develop my personal and professional skills",
+        skills: [
+            "React",
+            "C",
+            "PHP",
+            "Python",
+            "SQLite",
+            "HTML",
+            "CSS",
+            "Tailwind",
+            "Design Patterns",
+            "User Research",
+            "Communication",
+            "Backend",
+            "Frontend",
+            "Restful APIs",
+            "Problem Solving"
+        ]
+    }
+
+
     return (
-        <div className="flex flex-col rounded-xl border p-2 lg:p-5 lg:w-2/3 mx-auto justify-center items-center">
-            <h2 className="text-xl lg:text-2xl 2xl:text-4xl m-2">Experience</h2>
-            <HMRCExperience />
-            <UniversityExperience />
+
+        <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
+            <div className="px-4 py-5 sm:px-6">
+                <h3 className="text-gray-900 text-xl font-bold">Relevant Experience</h3>
+            </div>
+            <div className="px-4 py-5 sm:p-6 text-justify">
+                <ExperienceType description={hmrcExperience.description} skills={hmrcExperience.skills}/>
+                <ExperienceType description={universityExperience.description} skills={universityExperience.skills}/>
+            </div>
         </div>
     )
 }

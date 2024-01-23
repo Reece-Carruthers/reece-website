@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 export default {
   content: [
     "./index.html",
@@ -11,7 +13,7 @@ export default {
         'custom-gradient': 'linear-gradient(to bottom, #2c3e50, #3498db)'
       },
       fontFamily: {
-          'sans': ['"JetBrains Mono"', 'ui-sans-serif', 'system-ui'],
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       }
     },
   },
