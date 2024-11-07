@@ -13,7 +13,7 @@ const profile = {
     email: 'reece@reececarruthers.co.uk',
     backgroundImage:
         'https://images.unsplash.com/photo-1507103418911-45d03b291916?q=80&w=2692&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Graduate Software Engineer',
+    title: 'Graduate Scala Software Engineer',
     location: 'Newcastle upon Tyne',
 }
 export default function Banner() {

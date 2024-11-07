@@ -53,13 +53,6 @@ export default function TechStack() {
                         height={48}
                     />
                     <img
-                        className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg"
-                        alt="Tailwind CSS"
-                        width={158}
-                        height={48}
-                    />
-                    <img
                         className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
                         alt="MongoDB"
